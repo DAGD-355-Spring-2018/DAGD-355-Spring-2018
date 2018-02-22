@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Player Body
   - Text
+  - Medium
+  - Pushable
   layers:
   - Default
   - TransparentFX
