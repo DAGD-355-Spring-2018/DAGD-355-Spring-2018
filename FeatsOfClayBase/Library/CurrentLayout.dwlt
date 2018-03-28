@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 22
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 23
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -356,9 +356,9 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 50faffff
-    m_LastClickedID: -1456
-    m_ExpandedIDs: 4cfbffffa2fbffff000000004e2a0000b82a00000e2b00001a2b0000
+    m_SelectedIDs: 32280000
+    m_LastClickedID: 10290
+    m_ExpandedIDs: c4fbffff1afcffff00000000502800007a2800009c280000f2280000fe280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -451,19 +451,18 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders:
-    - Assets/Prefabs/StateCombinations/Bodies
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\jonesb49\Documents\FeatsOfClayBase
+  m_LastProjectPath: C:\Users\jonesb49\Documents\GitHub\DAGD-355-Spring-2018\FeatsOfClayBase
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 54360000
     m_LastClickedID: 13908
-    m_ExpandedIDs: 94280000642900006e29000076290000aa2c0000
+    m_ExpandedIDs: 502600005c26000070260000222700002c27000034270000902a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -491,21 +490,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 94280000a0280000b4280000642900006e29000076290000aa2c0000
+    m_ExpandedIDs: 000000005026000070260000222700002c270000902a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: MediumScript
-      m_OriginalName: MediumScript
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 1378
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 3}
     m_SearchString: 
@@ -654,9 +653,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.7100935, y: -0.7631526, z: -1.9608068}
+    m_Target: {x: -2.3983705, y: -0.89171386, z: -1.3344247}
     speed: 2
-    m_Value: {x: -1.7100935, y: -0.7631526, z: -1.9608068}
+    m_Value: {x: -2.3983705, y: -0.89171386, z: -1.3344247}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -679,13 +678,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.028681753, y: -0.95944965, z: 0.25967067, w: 0.106078155}
+    m_Target: {x: -0.060268942, y: 0.9065323, z: -0.1387001, w: -0.39412758}
     speed: 2
-    m_Value: {x: 0.02868107, y: -0.95942676, z: 0.25966448, w: 0.10607563}
+    m_Value: {x: -0.06026872, y: 0.90652895, z: -0.13869959, w: -0.39412612}
   m_Size:
-    m_Target: 9.211697
+    m_Target: 10.937578
     speed: 2
-    m_Value: 9.211697
+    m_Value: 10.937578
   m_Ortho:
     m_Target: 0
     speed: 2
