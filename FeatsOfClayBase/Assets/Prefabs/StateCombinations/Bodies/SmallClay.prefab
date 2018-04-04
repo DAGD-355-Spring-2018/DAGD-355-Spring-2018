@@ -83,7 +83,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -99,7 +98,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -129,6 +127,7 @@ MonoBehaviour:
   eState: {fileID: 114661549428729772}
   sState: {fileID: 114674246833896226}
   pickup: {fileID: 0}
+  p: {fileID: 0}
 --- !u!114 &114661549428729772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropsPickup: 0
   ejectStrength: 0
+  height: 0
+  g: {fileID: 114462751433735224}
 --- !u!135 &135142369781096996
 SphereCollider:
   m_ObjectHideFlags: 1

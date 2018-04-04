@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\OldScripts\TinyStateScript.cs" />
      <Compile Include="Assets\Scripts\PickupScript.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerV2.cs" />
+     <Compile Include="Assets\Scripts\PushObject.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\LargeScript.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\MediumScript.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\SizeScript.cs" />

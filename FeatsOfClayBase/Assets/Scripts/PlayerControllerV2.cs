@@ -13,10 +13,13 @@ public class PlayerControllerV2 : MonoBehaviour {
 	float moveY;
 	Rigidbody rb;
 
+	public List<GameObject> nearbyInteractables;
+	public GameObject closestInteractable;
 	private Vector3 prevPos;
 	private Transform m_Cam;                  // A reference to the main camera in the scenes transform
 	private Vector3 m_CamForward;             // The current forward direction of the camera
 	private Vector3 m_Move;
+	
 
 	[SerializeField] float m_MovingTurnSpeed = 360;
 	[SerializeField] float m_StationaryTurnSpeed = 180;
@@ -145,5 +148,6 @@ public class PlayerControllerV2 : MonoBehaviour {
 	{
 		currentState = bodyList[bodyList.Count - 1]; // Sets clayton's current state to the last object in the bodycount list
 		gCon = currentState.GetComponent<GolemController>(); // Sets the current Golem controller to that body part's GolemController.
+		gCon.p = this;
 	}
 }

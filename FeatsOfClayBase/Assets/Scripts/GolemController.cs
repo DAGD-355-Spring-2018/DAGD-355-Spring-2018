@@ -8,6 +8,8 @@ public class GolemController : MonoBehaviour {
 
 	public GameObject pickup;
 	
+	public PlayerControllerV2 p;
+	
 	public void Eject()
 	{
 		if (sState.dropsPickup)

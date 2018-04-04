@@ -127,6 +127,7 @@ MonoBehaviour:
   eState: {fileID: 114714965223776316}
   sState: {fileID: 114302741555549900}
   pickup: {fileID: 1052578127171634, guid: 8f411392d8cbc794581f02302577fcf5, type: 2}
+  p: {fileID: 0}
 --- !u!114 &114302741555549900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,6 +142,7 @@ MonoBehaviour:
   dropsPickup: 1
   ejectStrength: 3.5
   height: 0.5
+  g: {fileID: 114116723216058410}
 --- !u!114 &114714965223776316
 MonoBehaviour:
   m_ObjectHideFlags: 1

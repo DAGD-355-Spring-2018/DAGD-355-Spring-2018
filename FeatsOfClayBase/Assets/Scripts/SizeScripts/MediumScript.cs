@@ -7,8 +7,26 @@ public class MediumScript : SizeScript {
 	{
 		height = .5f;
 	}
-	public override void Action()
+	public override void Action() // This shit will pick stuff up!
 	{
+		if(g.p.closestInteractable != null)
+		{
+			PushObject pushBlock = g.p.closestInteractable.GetComponent<PushObject>();
+			if(pushBlock != null)
+			{
+				if(!pushBlock.hasJoint)
+				{
+					pushBlock.gameObject.AddComponent<FixedJoint>();
+					pushBlock.GetComponent<FixedJoint>().connectedBody = GetComponent<Rigidbody>();
+					pushBlock.changeState();
+				}
+				else
+				{
+					pushBlock.changeState();
+				}
+			}
+				
+		}
 		Debug.Log("Medium Action");
 	}
 }
