@@ -151,8 +151,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropsPickup: 1
-  ejectStrength: 3.5
+  ejectStrength: 4
   height: 1
+  speed: 1
+  DistanceUp: -1
+  minDistance: 1.5
+  maxDistance: 3
   g: {fileID: 114288615225610842}
 --- !u!136 &136313717517512274
 CapsuleCollider:

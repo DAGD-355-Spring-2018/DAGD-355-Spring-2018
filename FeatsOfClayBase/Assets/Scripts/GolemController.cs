@@ -12,6 +12,8 @@ public class GolemController : MonoBehaviour {
 	
 	public void Eject()
 	{
+		sState.Eject();
+		eState.Eject();
 		if (sState.dropsPickup)
 		{
 			GameObject newPickup = Instantiate(pickup, transform.position, transform.rotation, null);

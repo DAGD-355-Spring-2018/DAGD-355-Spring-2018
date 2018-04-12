@@ -9,14 +9,16 @@ public class PlayerControllerV2 : MonoBehaviour {
 	public List<GameObject> bodyList;
 	public float moveSpeed = 10;
 	public float speed = 10;
+	public Rigidbody rb;
 	float moveX;
 	float moveY;
-	Rigidbody rb;
+
 
 	public List<GameObject> nearbyInteractables;
 	public GameObject closestInteractable;
 	private Vector3 prevPos;
-	private Transform m_Cam;                  // A reference to the main camera in the scenes transform
+	private Transform m_Cam;				// A reference to the main camera in the scenes transform
+	private MainCameraController mCC;
 	private Vector3 m_CamForward;             // The current forward direction of the camera
 	private Vector3 m_Move;
 	
@@ -32,6 +34,7 @@ public class PlayerControllerV2 : MonoBehaviour {
 		if (Camera.main != null)
 		{
 			m_Cam = Camera.main.transform;
+			mCC = m_Cam.GetComponent<MainCameraController>();
 		}
 
 		rb = GetComponent<Rigidbody>();
@@ -40,6 +43,7 @@ public class PlayerControllerV2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		FindClosestInteractale();
 		if (Input.GetButtonDown("Fire1")) // Generic action for element
 		{
 			gCon.eState.Action();
@@ -85,21 +89,34 @@ public class PlayerControllerV2 : MonoBehaviour {
 		// turn amount and forward amount required to head in the desired
 		// direction.
 		if (move.magnitude > 1f) move.Normalize();
-
 		move = transform.InverseTransformDirection(move);
 		m_TurnAmount = Mathf.Atan2(move.x, move.z);
 		m_ForwardAmount = move.z;
+		m_Move *= gCon.sState.speed; 
 		rb.velocity = new Vector3 (m_Move.x, rb.velocity.y, m_Move.z);
 		//rb.AddForce(Physics.gravity*2);
 		ApplyExtraTurnRotation();
 
-		// control and velocity handling is different when grounded and airborne:
-		
 		
 
 	}
 
-
+	public void FindClosestInteractale()
+	{
+		closestInteractable = null;
+		float dis = 100; // set a arbitrary distance
+		float tempDis = 0;
+		closestInteractable = null;
+		foreach(GameObject go in nearbyInteractables)
+		{
+			tempDis = Vector3.Distance(transform.position, go.transform.position);
+			if (tempDis < dis)
+			{
+				closestInteractable = go; // if it is closer than the closest object previously, set it to the closest object.
+				dis = tempDis; //  resetting the distance variable.
+			}
+		}
+	}
 
 	void ApplyExtraTurnRotation()
 	{
@@ -120,6 +137,29 @@ public class PlayerControllerV2 : MonoBehaviour {
 			}
 		}
 
+	}
+	// detecting all of the objects Clayton is touching that can be interacted with.
+	public void OnCollisionEnter(Collision c)
+	{
+		if (c.gameObject.GetComponent<Interactable>() != null)
+		{
+			if(!nearbyInteractables.Contains(c.gameObject))
+			{
+				nearbyInteractables.Add(c.gameObject);
+			}
+		}
+	}
+
+	public void OnCollisionExit(Collision c)
+	{
+		if (c.gameObject.GetComponent<Interactable>() != null)
+		{
+			if(nearbyInteractables.Contains(c.gameObject))
+			{
+				nearbyInteractables.Remove(c.gameObject);
+			}
+
+		}
 	}
 
 	public void PickupBody(GameObject go, int size) // adding the powerup from the body pickup to the player
@@ -149,5 +189,10 @@ public class PlayerControllerV2 : MonoBehaviour {
 		currentState = bodyList[bodyList.Count - 1]; // Sets clayton's current state to the last object in the bodycount list
 		gCon = currentState.GetComponent<GolemController>(); // Sets the current Golem controller to that body part's GolemController.
 		gCon.p = this;
+		// used for updating the camera's distance
+		mCC.target = currentState.transform;
+		mCC.DistanceUp = gCon.sState.DistanceUp;
+		mCC.maxDistance = gCon.sState.maxDistance;
+		mCC.minDistance = gCon.sState.minDistance;
 	}
 }

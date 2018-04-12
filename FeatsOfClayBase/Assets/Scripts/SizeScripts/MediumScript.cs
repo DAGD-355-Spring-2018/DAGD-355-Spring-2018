@@ -3,30 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MediumScript : SizeScript {
+	PushObject pushBlock;
 	void Start()
 	{
 		height = .5f;
 	}
+	public override void Eject()
+	{
+		DestroyJoint();
+		base.Eject();
+	}
 	public override void Action() // This shit will pick stuff up!
 	{
-		if(g.p.closestInteractable != null)
+		if(pushBlock == null)
 		{
-			PushObject pushBlock = g.p.closestInteractable.GetComponent<PushObject>();
-			if(pushBlock != null)
+			if (g.p.closestInteractable != null)
 			{
-				if(!pushBlock.hasJoint)
+				Debug.Log("close Interactable Exists");
+				pushBlock = g.p.closestInteractable.GetComponent<PushObject>();
+				if (pushBlock != null)
 				{
-					pushBlock.gameObject.AddComponent<FixedJoint>();
-					pushBlock.GetComponent<FixedJoint>().connectedBody = GetComponent<Rigidbody>();
-					pushBlock.changeState();
+					Debug.Log("Closest Object is a Push Block");
+					if (!pushBlock.hasJoint)
+					{
+						CreateJoint();
+					}
+					
 				}
-				else
-				{
-					pushBlock.changeState();
-				}
-			}
-				
+			}	
+		}
+		else
+		{
+			DestroyJoint();
 		}
 		Debug.Log("Medium Action");
+	}
+	private void CreateJoint()
+	{
+		Debug.Log("Creating Joint");
+		pushBlock.gameObject.AddComponent<FixedJoint>();
+		pushBlock.GetComponent<FixedJoint>().connectedBody = g.p.rb;
+		pushBlock.ChangeState();
+	}
+	private void DestroyJoint()
+	{
+		if (pushBlock != null)
+		{
+			Debug.Log("removing Joint");
+			pushBlock.ChangeState();
+			pushBlock = null;
+		}
 	}
 }

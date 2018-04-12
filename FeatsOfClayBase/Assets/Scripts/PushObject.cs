@@ -63,7 +63,7 @@ public class PushObject : Interactable
 		*/
     }
 
-	public void changeState()
+	public void ChangeState()
 	{
 		if (!hasJoint)
 		{

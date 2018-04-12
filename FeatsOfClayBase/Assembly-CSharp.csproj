@@ -51,13 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ElementScript.cs" />
      <Compile Include="Assets\Scripts\ElementScripts\ClayScript.cs" />
+     <Compile Include="Assets\Scripts\ElementScripts\ElementScript.cs" />
      <Compile Include="Assets\Scripts\ElementScripts\StoneScript.cs" />
      <Compile Include="Assets\Scripts\ElementScripts\WaxScript.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GolemController.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
+     <Compile Include="Assets\Scripts\MainCameraController.cs" />
      <Compile Include="Assets\Scripts\OldScripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\OldScripts\FloorScript.cs" />
      <Compile Include="Assets\Scripts\OldScripts\LargePickupScript.cs" />

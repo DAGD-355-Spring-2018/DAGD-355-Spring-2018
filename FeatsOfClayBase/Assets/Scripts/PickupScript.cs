@@ -17,7 +17,9 @@ public class PickupScript : Interactable {
 		if (player.bodyList.Count == size - 1)
 		{
 			player.PickupBody(gBody, size);
+			player.nearbyInteractables.Remove(this.gameObject);
 			Destroy(this.gameObject);
+			
 		}
 		//Debug.Log("Interacted with a pickup");
 	}

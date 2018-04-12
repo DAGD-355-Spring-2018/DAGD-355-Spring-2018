@@ -8,4 +8,9 @@ public class StoneScript :ElementScript {
 	{
 		Debug.Log("Stone Action");
 	}
+	public override void Eject()
+	{
+		Debug.Log("Stone Eject");
+		base.Eject();
+	}
 }
