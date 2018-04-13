@@ -90,10 +90,10 @@ public class Emitter : MonoBehaviour
             }
         }
 		// Jank solution to stopping the laser form defaulting to the origin. It works, but may need to be dejanked later.
-		if (lr.GetPosition(lr.positionCount-1) == Vector3.zero)
-		{
-			lr.positionCount--;
-		}
+		//if (lr.GetPosition(lr.positionCount-1) == Vector3.zero)
+		//{
+		//	lr.positionCount--;
+		//}
 
     }
 	void AddPoint(RaycastHit Hit)
