@@ -52,9 +52,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ElementScripts\ClayScript.cs" />
+     <Compile Include="Assets\Scripts\ElementScripts\CrystalScript.cs" />
      <Compile Include="Assets\Scripts\ElementScripts\ElementScript.cs" />
      <Compile Include="Assets\Scripts\ElementScripts\StoneScript.cs" />
      <Compile Include="Assets\Scripts\ElementScripts\WaxScript.cs" />
+     <Compile Include="Assets\Scripts\Emitter.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GolemController.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />

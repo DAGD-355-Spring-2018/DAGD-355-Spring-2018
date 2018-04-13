@@ -12,4 +12,9 @@ public class ElementScript : MonoBehaviour {
 	{
 		Debug.Log("Elemental Eject");
 	}
+
+	public virtual bool OnLaserHit()
+	{
+		return false;
+	}
 }

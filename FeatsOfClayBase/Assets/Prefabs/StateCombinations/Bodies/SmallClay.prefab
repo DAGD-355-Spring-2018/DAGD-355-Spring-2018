@@ -153,7 +153,7 @@ MonoBehaviour:
   dropsPickup: 0
   ejectStrength: 0
   height: 0
-  speed: 2
+  speed: 2.5
   DistanceUp: -2
   minDistance: 0.4
   maxDistance: 0.6

@@ -5,6 +5,9 @@ using UnityEngine;
 public class PickupScript : Interactable {
 	public GameObject gBody;
 	public int size;
+	public int element;
+	// 0 = stone
+	// 1 = crystal
 
 	public void Start()
 	{
@@ -38,9 +41,10 @@ public class PickupScript : Interactable {
 	{
 		foreach (Transform child in transform)
 		{
-			child.gameObject.layer = 0;
+			child.gameObject.layer = 11;
+			child.tag = "Interactable";
 		}
-		gameObject.layer = 0;
+		gameObject.layer = 11;
 		Debug.Log("collision reEnabled");
 	}
 }
