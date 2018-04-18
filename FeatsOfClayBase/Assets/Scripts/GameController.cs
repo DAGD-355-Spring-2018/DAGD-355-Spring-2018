@@ -6,6 +6,8 @@ public class GameController : MonoBehaviour {
 	public GameObject clayton;
 	public MainCameraController mCC;
 	static GameObject player;
+
+	public List<GameObject> particleSets;
 	// Use this for initialization
 	void Start () {
 		if (player == null)

@@ -25,7 +25,7 @@ public class MainCameraController : MonoBehaviour
     RaycastHit hit;
     float cameraHeight = 55f;
     float cameraPan = 0f;
-    float camRotateSpeed = 180f;
+    float camRotateSpeed = 400f;
     Vector3 camPosition;
     Vector3 camMask;
     Vector3 followMask;
@@ -42,7 +42,7 @@ public class MainCameraController : MonoBehaviour
 
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
 		
         HorizontalAxis = Input.GetAxis("Mouse X");
