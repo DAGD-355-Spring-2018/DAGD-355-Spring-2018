@@ -12,6 +12,13 @@ public class Interactable : MonoBehaviour {
 		Debug.Log("interact with me, senpai");
 	}
 
+	public virtual void OnWaterHit()
+	{
+		if (onFire)
+		{
+			onFire = false;
+		}
+	}
 	public virtual bool OnLaserHit()
 	{
 		if(flamable)
@@ -31,6 +38,17 @@ public class Interactable : MonoBehaviour {
 				onFire = true;
 			}
 			Debug.Log(gameObject.name + "Is on fire!");
+		}
+	}
+
+	public virtual void OnCollisionEnter(Collision col)
+	{
+		if (col.gameObject.tag == "Interactable")
+		{
+			if(onFire)
+			{
+				col.gameObject.GetComponent<Interactable>().OnFireHit();
+			}
 		}
 	}
 }
