@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23722521346875114}
   m_Layer: 8
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 23932730595109402}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036438308926026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.232, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 4755541885894038}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401792243181622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2411, z: 0.095}
+  m_LocalPosition: {x: 0, y: 0.0091, z: 0.095}
   m_LocalScale: {x: 0.1255104, y: 0.1255104, z: 0.1255104}
   m_Children: []
   m_Father: {fileID: 4755541885894038}
@@ -194,6 +194,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2109b213987e012459d6809ab84556c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reflectLaser: 0
+  flamable: 0
+  isDestroyedByFire: 0
+  smoulderTimer: 1
+  smoulderTimerDefault: 0
+  burnTimer: 0
+  burnTimerDefault: 0
+  smouldering: 0
+  onFire: 0
 --- !u!114 &114861765356728066
 MonoBehaviour:
   m_ObjectHideFlags: 1

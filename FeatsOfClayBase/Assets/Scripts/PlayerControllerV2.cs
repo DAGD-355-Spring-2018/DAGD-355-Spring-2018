@@ -9,6 +9,8 @@ public class PlayerControllerV2 : MonoBehaviour {
 	public List<GameObject> bodyList;
 	public float moveSpeed = 10;
 	public float speed = 10;
+	public float waterMult = 1;
+	public float fireMult = 2;
 	public Rigidbody rb;
 	float moveX;
 	float moveY;
@@ -56,7 +58,14 @@ public class PlayerControllerV2 : MonoBehaviour {
 		{
 			Eject();
 		}
-		// Boring movement. Realstically we should have different movement code for each size, or a more advanced movement system.
+		if(gCon.eState.onFire)
+		{
+			gCon.eState.burnTimer -= Time.deltaTime;
+			if(gCon.eState.burnTimer <= 0)
+			{
+				Eject();
+			}
+		}
 	}
 	void FixedUpdate()
 	{
@@ -88,11 +97,16 @@ public class PlayerControllerV2 : MonoBehaviour {
 		// convert the world relative moveInput vector into a local-relative
 		// turn amount and forward amount required to head in the desired
 		// direction.
-		if (move.magnitude > 1f) move.Normalize();
+		if (move.magnitude > 1f || gCon.eState.onFire) move.Normalize();
 		move = transform.InverseTransformDirection(move);
 		m_TurnAmount = Mathf.Atan2(move.x, move.z);
 		m_ForwardAmount = move.z;
-		m_Move *= gCon.sState.speed; 
+		m_Move *= gCon.sState.speed;
+		//state movement modifiers!
+		if(gCon.eState.onFire)
+		{
+			m_Move *= fireMult;
+		}
 		rb.velocity = new Vector3 (m_Move.x, rb.velocity.y, m_Move.z);
 		//rb.AddForce(Physics.gravity*2);
 		ApplyExtraTurnRotation();
@@ -164,16 +178,24 @@ public class PlayerControllerV2 : MonoBehaviour {
 
 	public void PickupBody(GameObject go, int size) // adding the powerup from the body pickup to the player
 	{
+		bool fireTransfer = gCon.eState.onFire;
 		GameObject tempGO = Instantiate(go, transform.position, transform.rotation, transform);
 		bodyList.Add(tempGO);							//Add it to the end of the body list
 		tempGO.transform.parent = stateHolder.transform;
 		UpdateCurrentState(); // makes sure that all of the body states are correct
-
+		if(fireTransfer)
+		{
+			if(gCon.eState.flamable)
+			{
+				gCon.eState.BurstIntoFlames();
+			}
+		}
 		transform.position = new Vector3(transform.position.x, transform.position.y + currentState.GetComponent<GolemController>().sState.height/2, transform.position.z);
 	}
 
 	public void Eject()
 	{
+		bool fireTransfer = gCon.eState.onFire;
 		gCon.Eject(); // spawns the pickup on the ground
 		rb.velocity += Vector3.up * gCon.sState.ejectStrength; // Each size state has a eject strength variable that can be used to make adjust the jump power of clayton by size
 		if (bodyList.Count > 1) // if Clayton is not in the small state, remove the last object in clayton's body list
@@ -181,6 +203,10 @@ public class PlayerControllerV2 : MonoBehaviour {
 			bodyList.RemoveAt(bodyList.Count - 1);
 			Destroy(currentState);
 			UpdateCurrentState();
+		}
+		if(fireTransfer && gCon.eState.flamable)
+		{
+			gCon.eState.BurstIntoFlames();
 		}
 	}
 
@@ -194,5 +220,21 @@ public class PlayerControllerV2 : MonoBehaviour {
 		mCC.DistanceUp = gCon.sState.DistanceUp;
 		mCC.maxDistance = gCon.sState.maxDistance;
 		mCC.minDistance = gCon.sState.minDistance;
+	}
+
+
+	// ElementalHits
+	public void OnFireHit()
+	{
+		gCon.eState.OnFireHit();
+	}
+	public void OnWaterHit()
+	{
+		gCon.eState.OnWaterHit();
+	}
+	public bool OnLaserHit()
+	{
+		Debug.Log("Player hit by laser");
+		return gCon.eState.OnLaserHit();
 	}
 }

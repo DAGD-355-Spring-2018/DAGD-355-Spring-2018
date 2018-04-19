@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 707, y: 492}
   m_MaxSize: {x: 18002, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 92
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -358,7 +358,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 625fffff98bbffff3cbdfffff2dbffff34faffff1afcffff00000000
+    m_ExpandedIDs: 0c2bf9ffc650f9fff265f9ffe8fbfffff2fbffff1afcffff0000000094290000da290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -452,7 +452,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Materials/ClaytonMars
+    - Assets/Prefabs/StateCombinations/Bodies/Medium
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -463,7 +463,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 54360000
     m_LastClickedID: 13908
-    m_ExpandedIDs: 000000005a2600007a26000096260000be270000c0270000f42700002e28000030280000fe2a0000
+    m_ExpandedIDs: 000000005a2600005e2600006e2600007a26000096260000be270000c0270000e0270000f42700002e28000030280000fe2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,10 +488,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 187}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a2600005e2600006e2600007a26000096260000be270000c0270000e0270000f42700002e28000030280000fe2a0000
+    m_ExpandedIDs: 000000005a2600005e2600006a2600006e2600007a260000842600009226000098260000b2260000a6270000be270000e0270000e4270000f427000002280000102800001e280000342800003a280000fe2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -574,7 +574,7 @@ MonoBehaviour:
     height: 650
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
-  m_Stats: 0
+  m_Stats: 1
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
@@ -649,14 +649,14 @@ MonoBehaviour:
     width: 1427
     height: 650
   m_SceneLighting: 1
-  lastFramingTime: 501.4397780306636
+  lastFramingTime: 3760.5298119478725
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.2555666, y: -0.08000006, z: -0.5992516}
+    m_Target: {x: -1.1846347, y: -0.5494667, z: 0.14392614}
     speed: 2
-    m_Value: {x: 3.2555666, y: -0.08000006, z: -0.5992516}
+    m_Value: {x: -1.1846347, y: -0.5494667, z: 0.14392614}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -679,13 +679,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.08015407, y: -0.64444923, z: 0.06800886, w: 0.7573961}
+    m_Target: {x: 0.17006852, y: -0.53458977, z: 0.11064677, w: 0.8203951}
     speed: 2
-    m_Value: {x: 0.080153525, y: -0.6444449, z: 0.0680084, w: 0.757391}
+    m_Value: {x: 0.1700685, y: -0.5345897, z: 0.110646755, w: 0.820395}
   m_Size:
-    m_Target: 3.1450784
+    m_Target: 7.803805
     speed: 2
-    m_Value: 3.1450784
+    m_Value: 7.803805
   m_Ortho:
     m_Target: 0
     speed: 2

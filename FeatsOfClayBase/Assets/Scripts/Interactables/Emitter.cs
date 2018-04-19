@@ -48,9 +48,9 @@ public class Emitter : MonoBehaviour
 			if (Physics.Raycast(raycastShootPosition, fwd, out Hit, 100, playerBodyLayer))//does it hit
             {
 
-                if (Hit.collider.gameObject.tag == "Player" && clayton.GetComponent<PlayerControllerV2>().gCon.eState.OnLaserHit() )  // HitsClayton
+                if (Hit.collider.gameObject.tag == "Player" && clayton.GetComponent<PlayerControllerV2>().OnLaserHit() )  // HitsClayton
                 {
-
+					Debug.Log(Hit.collider.name);
 					AddPoint(Hit);
 					if (!hitObjects.Contains(clayton))
 					{

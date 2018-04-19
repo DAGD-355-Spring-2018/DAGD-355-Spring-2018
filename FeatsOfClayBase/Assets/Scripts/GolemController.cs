@@ -9,12 +9,12 @@ public class GolemController : MonoBehaviour {
 	public GameObject pickup;
 	
 	public PlayerControllerV2 p;
-	
+
 	public void Eject()
 	{
 		sState.Eject();
 		eState.Eject();
-		if (sState.dropsPickup)
+		if (sState.dropsPickup && !eState.onFire)
 		{
 			GameObject newPickup = Instantiate(pickup, transform.position, transform.rotation, null);
 			Debug.Log("dropping Pickup");

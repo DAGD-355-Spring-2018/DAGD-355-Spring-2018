@@ -22,18 +22,20 @@ TODO: I want it to stop after a specific distance is crossed. (As in, you move t
 
 public class PushObject : Interactable
 {
+
     Rigidbody boxRB;
     GameObject pushObj;
-    public bool touching = false;
+	[Header("PushObject Attributes")]
+	public bool touching = false;
     public bool hasJoint = false;
 
 
-    // Use this for initialization
-    void Start()
+	// Use this for initialization
+	public override void Start()
     {
         boxRB = GetComponent<Rigidbody>();
         if (boxRB == null) return;  // It should be there, but just in case...
-
+		base.Start();
         //rb.mass = objectMass; // 
 
     }

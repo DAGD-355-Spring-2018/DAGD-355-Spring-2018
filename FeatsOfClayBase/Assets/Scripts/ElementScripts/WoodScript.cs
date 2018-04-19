@@ -6,11 +6,16 @@ public class WoodScript : ElementScript {
 
 	public override void Action()
 	{
-		Debug.Log("Crystal Action");
+		Debug.Log("Wood Action");
 	}
 
 	public override bool OnLaserHit()
 	{
-		return true;
+		return base.OnLaserHit();
+	}
+
+	public override void OnFireHit()
+	{
+		base.OnFireHit();
 	}
 }

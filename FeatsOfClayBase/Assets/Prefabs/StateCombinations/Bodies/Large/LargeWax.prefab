@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23206921344139112}
   m_Layer: 8
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,6 +158,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14f1e21cabdd7a4f9fe729ea29e0acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reflectLaser: 0
+  flamable: 0
+  isDestroyedByFire: 0
+  smoulderTimer: 1
+  smoulderTimerDefault: 0
+  burnTimer: 0
+  burnTimerDefault: 0
+  smouldering: 0
+  onFire: 0
 --- !u!136 &136313717517512274
 CapsuleCollider:
   m_ObjectHideFlags: 1
