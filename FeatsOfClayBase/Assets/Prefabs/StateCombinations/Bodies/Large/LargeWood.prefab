@@ -146,7 +146,7 @@ MonoBehaviour:
   reflectLaser: 0
   flamable: 1
   isDestroyedByFire: 1
-  smoulderTimer: 0.1
+  smoulderTimer: 0.01
   smoulderTimerDefault: 0
   burnTimer: 6
   burnTimerDefault: 0

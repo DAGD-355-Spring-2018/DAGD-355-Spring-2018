@@ -203,6 +203,8 @@ MonoBehaviour:
   burnTimerDefault: 0
   smouldering: 0
   onFire: 0
+  wet: 0
+  floats: 0
 --- !u!114 &114861765356728066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eState: {fileID: 114776040830860408}
   sState: {fileID: 114998668845487454}
-  pickup: {fileID: 1251073938885572, guid: 00f854b21cffbdb448b011f3ca20edfe, type: 2}
+  pickup: {fileID: 1705970119994118, guid: 12d57125dceabee4db7a4eef5bcc7071, type: 2}
   p: {fileID: 0}
 --- !u!114 &114998668845487454
 MonoBehaviour:

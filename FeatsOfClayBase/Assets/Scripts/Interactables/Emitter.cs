@@ -31,11 +31,14 @@ public class Emitter : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        vertexCount = 2;
-        raycastShootPosition = emitter.transform.position;//sets the raycast position to itself
-        fwd = transform.TransformDirection(Vector3.forward);//sets the foward vector to its forward vector
-        lr.positionCount = vertexCount;//sets the number of line segment to vertex count
-        ShootRay();     //shoots the ray  
+		if (!PauseMenu.GameIsPaused)
+		{
+			vertexCount = 2;
+			raycastShootPosition = emitter.transform.position;//sets the raycast position to itself
+			fwd = transform.TransformDirection(Vector3.forward);//sets the foward vector to its forward vector
+			lr.positionCount = vertexCount;//sets the number of line segment to vertex count
+			ShootRay();     //shoots the ray 
+		}
     }
 
     void ShootRay()

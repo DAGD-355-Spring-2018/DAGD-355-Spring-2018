@@ -15,6 +15,8 @@ public class ElementScript : MonoBehaviour {
 	public float burnTimerDefault;
 	public bool smouldering;
 	public bool onFire = false;
+	public bool wet = false;
+	public bool floats = false;
 
 	public virtual void Start()
 	{
@@ -71,6 +73,7 @@ public class ElementScript : MonoBehaviour {
 	}
 	public virtual void OnWaterHit()
 	{
+		Debug.Log("hitting Water");
 		if (smouldering || onFire)
 		{
 			onFire = false;

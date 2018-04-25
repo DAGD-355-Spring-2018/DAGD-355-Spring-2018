@@ -65,14 +65,17 @@
      <Compile Include="Assets\Scripts\Interactables\PushObject.cs" />
      <Compile Include="Assets\Scripts\MainCameraController.cs" />
      <Compile Include="Assets\Scripts\OldScripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\OldScripts\Control.cs" />
      <Compile Include="Assets\Scripts\OldScripts\FloorScript.cs" />
      <Compile Include="Assets\Scripts\OldScripts\LargePickupScript.cs" />
      <Compile Include="Assets\Scripts\OldScripts\LargeStateScript.cs" />
      <Compile Include="Assets\Scripts\OldScripts\MediumStateScript.cs" />
+     <Compile Include="Assets\Scripts\OldScripts\Movement.cs" />
      <Compile Include="Assets\Scripts\OldScripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\OldScripts\SizeState.cs" />
      <Compile Include="Assets\Scripts\OldScripts\SmallPickupScript.cs" />
      <Compile Include="Assets\Scripts\OldScripts\TinyStateScript.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerV2.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\LargeScript.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\MediumScript.cs" />
