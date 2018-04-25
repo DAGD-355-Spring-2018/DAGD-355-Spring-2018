@@ -1,0 +1,2 @@
+C:\Users\jonesb49\Documents\GitHub\DAGD-355-Spring-2018\FeatsOfClayBase\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\jonesb49\Documents\GitHub\DAGD-355-Spring-2018\FeatsOfClayBase\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
