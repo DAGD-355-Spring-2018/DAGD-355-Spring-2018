@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\ElementScripts\StoneScript.cs" />
      <Compile Include="Assets\Scripts\ElementScripts\WaxScript.cs" />
      <Compile Include="Assets\Scripts\ElementScripts\WoodScript.cs" />
+     <Compile Include="Assets\Scripts\emitAudio.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GolemController.cs" />
      <Compile Include="Assets\Scripts\Interactables\Emitter.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\Scripts\OldScripts\SmallPickupScript.cs" />
      <Compile Include="Assets\Scripts\OldScripts\TinyStateScript.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\PlayAudio.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerV2.cs" />
      <Compile Include="Assets\Scripts\RockBullet.cs" />
      <Compile Include="Assets\Scripts\ShatterOnCollision.cs" />

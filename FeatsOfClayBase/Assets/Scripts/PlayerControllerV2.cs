@@ -13,13 +13,14 @@ public class PlayerControllerV2 : MonoBehaviour {
 	public float waterMult = 1;
 	public float fireMult = 2;
 	public bool floating;
+
+	bool InLaser;
 	public Rigidbody rb;
 	float moveX;
 	float moveY;
 	float forceFactor = 0f;
 	float waterLevel = 0f;
-
-
+	float laserTimer = 0.1f;
 	public List<GameObject> nearbyInteractables;
 	public GameObject closestInteractable;
 	private Vector3 prevPos;
@@ -27,6 +28,8 @@ public class PlayerControllerV2 : MonoBehaviour {
 	private MainCameraController mCC;
 	private Vector3 m_CamForward;             // The current forward direction of the camera
 	private Vector3 m_Move;
+
+	PlayAudio audioScript;
 
 
 	[SerializeField] float m_MovingTurnSpeed = 360;
@@ -41,7 +44,7 @@ public class PlayerControllerV2 : MonoBehaviour {
 			m_Cam = Camera.main.transform;
 			mCC = m_Cam.GetComponent<MainCameraController>();
 		}
-
+		audioScript = GetComponent<PlayAudio>();
 		rb = GetComponent<Rigidbody>();
 		UpdateCurrentState();
 	}
@@ -73,6 +76,15 @@ public class PlayerControllerV2 : MonoBehaviour {
 				}
 			}
 		}
+		laserTimer -= Time.deltaTime;
+		if(InLaser)
+		{
+			laserTimer = 1f;
+		}
+		if(laserTimer < 0)
+		{
+			InLaser = false;
+		}
 	}
 	void FixedUpdate()
 	{
@@ -86,6 +98,15 @@ public class PlayerControllerV2 : MonoBehaviour {
 			float h = Input.GetAxis("Horizontal");
 			float v = Input.GetAxis("Vertical");
 
+			// Play audio clips for character movement
+			if (h != 0 || v != 0)
+			{
+				audioScript.shouldPlay = true;
+			}
+			else
+			{
+				audioScript.shouldPlay = false;
+			}
 			// calculate move direction to pass to character
 			if (m_Cam != null)
 			{
@@ -239,6 +260,7 @@ public class PlayerControllerV2 : MonoBehaviour {
 			bodyList.RemoveAt(bodyList.Count - 1);
 			Destroy(currentState);
 			UpdateCurrentState();
+			audioScript.playJump();
 		}
 		if (fireTransfer && gCon.eState.flamable)
 		{
@@ -251,6 +273,7 @@ public class PlayerControllerV2 : MonoBehaviour {
 		currentState = bodyList[bodyList.Count - 1]; // Sets clayton's current state to the last object in the bodycount list
 		gCon = currentState.GetComponent<GolemController>(); // Sets the current Golem controller to that body part's GolemController.
 		gCon.p = this;
+		SwitchAudioClip(bodyList.Count - 1);
 		// used for updating the camera's distance
 		mCC.target = currentState.transform;
 		mCC.DistanceUp = gCon.sState.DistanceUp;
@@ -266,6 +289,12 @@ public class PlayerControllerV2 : MonoBehaviour {
 		}
 	}
 
+	public void SwitchAudioClip(int stateSize)
+	{
+
+		audioScript.switchTrack(stateSize);
+	}
+
 	// ElementalHits
 	public void OnFireHit()
 	{
@@ -278,6 +307,11 @@ public class PlayerControllerV2 : MonoBehaviour {
 	public bool OnLaserHit()
 	{
 		Debug.Log("Player hit by laser");
+		if(gCon.eState.OnLaserHit())
+		{
+			audioScript.playMagic();
+			InLaser = true;
+		}
 		return gCon.eState.OnLaserHit();
 	}
 }
