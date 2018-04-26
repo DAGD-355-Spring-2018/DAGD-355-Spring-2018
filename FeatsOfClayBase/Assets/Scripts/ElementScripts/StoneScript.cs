@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class StoneScript :ElementScript {
 
+	public GameObject rock;
+	public float rockSpeed;
 	public override void Action()
 	{
-		Debug.Log("Stone Action");
+		GameObject thrownRock = Instantiate(rock, transform.position, transform.rotation);
+		thrownRock.GetComponent<Rigidbody>().AddForce(thrownRock.transform.forward * rockSpeed);
 	}
 	public override void Eject()
 	{

@@ -237,6 +237,10 @@ MonoBehaviour:
   burnTimerDefault: 0
   smouldering: 0
   onFire: 0
+  wet: 0
+  floats: 0
+  rock: {fileID: 1561220032571730, guid: 4d265f58b610dfe439b63b4723eda8eb, type: 2}
+  rockSpeed: 550
 --- !u!136 &136495737147776910
 CapsuleCollider:
   m_ObjectHideFlags: 1

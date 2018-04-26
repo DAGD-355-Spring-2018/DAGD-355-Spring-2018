@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour {
 	public bool flamable;
 	public bool wet;
 	public bool isDestroyedByFire;
+	public bool thrown;
 	public float smoulderTimer = 1f;
 	GameObject currentParticle;
 	public float smoulderTimerDefault;

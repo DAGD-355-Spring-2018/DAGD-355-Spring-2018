@@ -77,10 +77,13 @@
      <Compile Include="Assets\Scripts\OldScripts\TinyStateScript.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerV2.cs" />
+     <Compile Include="Assets\Scripts\RockBullet.cs" />
+     <Compile Include="Assets\Scripts\ShatterOnCollision.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\LargeScript.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\MediumScript.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\SizeScript.cs" />
      <Compile Include="Assets\Scripts\SizeScripts\SmallScript.cs" />
+     <Compile Include="Assets\Scripts\ThrowObject.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

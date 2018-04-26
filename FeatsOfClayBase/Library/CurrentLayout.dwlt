@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -65,14 +65,14 @@ MonoBehaviour:
     y: 660
     width: 1417
     height: 271
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 33
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,10 +182,10 @@ MonoBehaviour:
     y: 0
     width: 1417
     height: 931
-  m_MinSize: {x: 202, y: 342}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 232, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 68
+  controlID: 10
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -204,8 +204,8 @@ MonoBehaviour:
     y: 0
     width: 283
     height: 931
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -356,23 +356,23 @@ MonoBehaviour:
     height: 910
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 042a0000
-    m_LastClickedID: 10756
-    m_ExpandedIDs: 5218f8ff7a68f8ff08fbffff1afbffffd6fbffffe0fbffff1afcffff00000000042a0000
+    m_SelectedIDs: 7c7afdff
+    m_LastClickedID: 0
+    m_ExpandedIDs: 2c98ffff3698ffff7098ffff000000009a2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: LWoodlPickup
+      m_OriginalName: LWoodlPickup
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -26832
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -407,7 +407,7 @@ MonoBehaviour:
     y: 100
     width: 281
     height: 910
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 176.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
@@ -452,7 +452,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Interactables
+    - Assets/Prefabs
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -463,7 +463,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 54360000
     m_LastClickedID: 13908
-    m_ExpandedIDs: 000000005c260000602600006c260000702600007e26000088260000982600009c2600009e260000a4260000b8260000ac270000c4270000e8270000ec270000fc2700000a280000182800002628000040280000442800004a280000bc2b0000
+    m_ExpandedIDs: 00000000b6260000ba260000c6260000ca260000da260000fc290000042a0000422b0000ec2b00000c2c0000102c0000142c00001e2c0000242c00007a2c00007c2c000084300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,10 +488,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 780}
-    m_SelectedIDs: 042a0000
+    scrollPos: {x: 0, y: 480}
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005c260000602600006c260000702600007e2600009c260000a4260000ac270000c4270000e4270000e8270000ec270000f6270000fc2700003e28000040280000bc2b0000
+    m_ExpandedIDs: 00000000b6260000c6260000ca260000da260000f6290000fc290000422b0000ec2b00000c2c0000142c0000162c00007c2c000084300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -516,8 +516,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 042a0000
-    m_LastClickedInstanceID: 10756
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -649,14 +649,14 @@ MonoBehaviour:
     width: 1415
     height: 639
   m_SceneLighting: 1
-  lastFramingTime: 3387.0546623285427
+  lastFramingTime: 1674.7932102144432
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -10.580756, y: 6.8272934, z: 3.3841245}
+    m_Target: {x: -2.8287022, y: -3.3838682, z: 2.7574017}
     speed: 2
-    m_Value: {x: -10.580756, y: 6.8272934, z: 3.3841245}
+    m_Value: {x: -2.8287022, y: -3.3838682, z: 2.7574017}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -679,13 +679,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.23252851, y: -0.65071744, z: 0.21996148, w: -0.6885596}
+    m_Target: {x: -0.3826428, y: 0.420706, z: -0.2016984, w: -0.79743886}
     speed: 2
-    m_Value: {x: -0.23252851, y: -0.65071744, z: 0.21996148, w: -0.6885596}
+    m_Value: {x: -0.3826428, y: 0.420706, z: -0.2016984, w: -0.79743886}
   m_Size:
-    m_Target: 11.864548
+    m_Target: 14.560222
     speed: 2
-    m_Value: 11.864548
+    m_Value: 14.560222
   m_Ortho:
     m_Target: 0
     speed: 2
